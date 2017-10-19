@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_scan"
+            android:icon="@drawable/ic_menu_scan"
+            android:title="Escanear" />
+        <item
+            android:id="@+id/nav_id"
+            android:icon="@drawable/ic_menu_id"
+            android:title="Documento" />
+
+        <item
+            android:id="@+id/nav_graduate"
+            android:icon="@drawable/ic_menu_graduate"
+            android:title="Graduando" />
+
+        <item
+            android:id="@+id/nav_configuration"
+            android:icon="@drawable/ic_menu_configuration"
+            android:title="Configuración" />
+
+        <item
+            android:id="@+id/nav_sync"
+            android:icon="@drawable/ic_menu_sync"
+            android:title="Sincronizar" />
+
+            <item
+                android:id="@+id/nav_validate"
+                android:icon="@drawable/ic_menu_validate"
+                android:title="Verificar" />
+    </group>
+
+</menu>
