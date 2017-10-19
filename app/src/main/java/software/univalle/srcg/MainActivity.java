@@ -101,8 +101,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     boolean formato(String resultado){
-        return resultado.contains("BEGIN:VCARD")&& resultado.contains("VERSION:3.0")&& resultado.contains("TITLE:")
-                && resultado.contains("FN:") && resultado.contains("END:VCARD");
+        return resultado.contains(" -:- ");
     }
 
     @Override
@@ -115,8 +114,9 @@ public class MainActivity extends AppCompatActivity
             } else {
                 String resultado = result.getContents();
                 if(formato(resultado)){
-                    String documento = resultado.split("TITLE:")[1].split("FN:")[0];
-                    String nombre = resultado.split("FN:")[1].split("END:")[0];
+                    String info[] = resultado.split(" -:- ", 2);
+                    String documento = info[0];
+                    String nombre = info[1];
                     txt_documento.setText(documento);
                     txt_nombre.setText(nombre);
                     txt_url.setText(server);

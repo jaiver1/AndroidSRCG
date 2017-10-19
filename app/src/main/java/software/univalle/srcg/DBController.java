@@ -18,7 +18,7 @@ public class DBController extends SQLiteOpenHelper {
 	@Override
 	public void onCreate(SQLiteDatabase database) {
 		String query;
-		query = "CREATE TABLE graduandos ( codigo INTEGER, nombre TEXT, apellido TEXT,programa TEXT," +
+		query = "CREATE TABLE graduandos ( codigo INTEGER,programa TEXT, nombre TEXT, apellido TEXT," +
 				"PRIMARY KEY (codigo))";
 		database.execSQL(query);
 		query = "CREATE TABLE invitados ( documento INTEGER, graduando INTEGER, nombre TEXT, apellido TEXT,asistencia INTEGER," +

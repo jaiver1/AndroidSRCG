@@ -64,6 +64,7 @@ public class ListActivity extends AppCompatActivity
 
             link = getIntent().getStringExtra("LINK");
             pass = getIntent().getStringExtra("PASS");
+
             List<Item> items = new ArrayList<Item>();
             ArrayList<HashMap<String, String>> graduatesList = controller.getAllGraduates();
             for(int i= 0; i < graduatesList.size(); i++ ){
@@ -78,7 +79,8 @@ public class ListActivity extends AppCompatActivity
                 for(int j= 0; j < guestList.size(); j++ ){
                     HashMap guest = guestList.get(j);
                     items.add(new ListItem(guest.get("documento").toString(),
-                            guest.get("nombre").toString()+" "+guest.get("apellido").toString()));
+                            guest.get("nombre").toString() + " " + guest.get("apellido").toString(),
+                            guest.get("asistencia").toString()));
                 }
             }
 
@@ -220,9 +222,9 @@ public class ListActivity extends AppCompatActivity
 
             queryValues = new HashMap<String, String>();
             queryValues.put("codigo", graduate.get("codigo").toString());
+            queryValues.put("programa", graduate.get("programa").toString());
             queryValues.put("nombre", graduate.get("nombre").toString());
             queryValues.put("apellido", graduate.get("apellido").toString());
-            queryValues.put("programa", graduate.get("programa").toString());
             controller.insertGraduate(queryValues);
 
             for (int j = 0; j < guests.length(); j++) {

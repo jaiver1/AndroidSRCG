@@ -11,30 +11,56 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"
             tools:replace="screenOrientation" />
+
         <activity
             android:name=".SplashActivity"
-            android:theme="@style/SplashTheme">
+            android:theme="@style/SplashTheme"
+            android:screenOrientation="portrait"
+            tools:replace="screenOrientation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name="com.journeyapps.barcodescanner.CaptureActivity"
             android:screenOrientation="portrait"
             tools:replace="screenOrientation" />
-        <activity android:name=".SuccessActivity" />
-        <activity android:name=".AlertActivity" />
-        <activity android:name=".ExceptionActivity" />
-        <activity android:name=".ErrorActivity" />
-        <activity android:name=".FailActivity" />
+
+        <activity
+            android:name=".SuccessActivity"
+            android:screenOrientation="portrait"
+            tools:replace="screenOrientation" />
+
+        <activity
+            android:name=".AlertActivity"
+            android:screenOrientation="portrait"
+            tools:replace="screenOrientation" />
+
+        <activity
+            android:name=".ExceptionActivity"
+            android:screenOrientation="portrait"
+            tools:replace="screenOrientation" />
+
+        <activity
+            android:name=".ErrorActivity"
+            android:screenOrientation="portrait"
+            tools:replace="screenOrientation" />
+
+        <activity
+            android:name=".FailActivity"
+            android:screenOrientation="portrait"
+            tools:replace="screenOrientation" />
+
         <activity
             android:name=".ListActivity"
             android:label="@string/title_activity_list"
@@ -46,6 +72,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="software.univalle.srcg.MainActivity" />
         </activity>
+
     </application>
 
 </manifest>
